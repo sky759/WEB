@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--内幕样式-->
+    <style>
+        #wrapper{
+            border: 5px solid green;
+            width: 300px;
+            height: 300px;
+        }
+        #apple{
+            width: 280px;
+            height: 50px;
+            border: 5px dotted blue;
+            margin: 0px 5px 0px 5px;/*边距 从上开始顺时针转*/
+        }
+        #orange{
+            width: 280px;
+            height: 100px;
+            border: 5px solid pink;
+            margin: 5px 5px 0px 5px;
+        }
+        #pear{
+            width: 280px;
+            height: 100px;
+            border: 5px dotted red;
+            margin: 5px 5px 0px 5px;
+        }
+        #redorange,#yelloworange,#greenorange{
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border: 5px solid;
+            margin-top:5px;
+        }
+        /*独立设置*/#yelloworange{
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="apple"></div>
+        <div id="orange">
+            <div id="redorange"></div>
+            <div id="yelloworange"></div>
+            <div id="greenorange"></div>
+        </div>
+        <div id="pear"></div>
+    </div>
+</body>
+</html>

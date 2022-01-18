@@ -1,0 +1,223 @@
+<html>
+    <head>
+        <title>网页</title>
+        <!--css 内部样式（内联样式）-->
+        <style>
+            #wrapper{
+                width: 700px;
+                height: 750px;
+                /*相对定位*/
+                position: relative;
+                left: 50%;
+                margin-left: -350px;
+            }
+            .main1{
+                /*border: 5px solid green;*/
+            }
+            .main2{
+                /*border-style: dotted;*/
+            }
+            #one{
+                /*border: 5px solid red;*/
+                text-align: center;
+                color: rebeccapurple;
+                height: 30px;
+                line-height: 30px;
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+            #two{
+                /*border:5px solid rebeccapurple;*/
+                text-align: center;
+                padding-bottom: 5px;
+            }
+            #two span {
+                font-size: 10px;
+            }
+            #three{
+                /*border:5px solid rebeccapurple;*/
+                /*height: 20px;*/
+            border-bottom:3px solid rebeccapurple;
+            padding-bottom: 5px;
+            }
+            #three #院系{
+               margin-left: 10px;
+            }
+            td{
+                border:5px solid rebeccapurple;
+                width: 100px;
+                text-align: center;
+            }
+            img{
+                height: 50px;
+            }
+            th{
+                border:3px solid yellowgreen;
+                background-color: rgba(135, 207, 235, 0.589);
+            }
+        </style>
+        <link rel="stylesheet" href="./index.css"><!--引用外部样式-->
+    </head>
+    <body>
+    <div id="wrapper" class="main1 main2 main3" ><!--行内样式-->
+        <div id="one">
+            <span>江西软件大学个人信息登记表</span>
+        </div>
+        <div id="two">
+            <span>（本表仅适用于2020级新生）</span>
+        </div>
+        <div id="three">
+            <label for="" id="院系">院系：</label>
+            <input type="text">
+            <label for="" id="2">专业：</label>
+            <input type="text">
+            <label for="" id="3">辅导员：</label>
+            <input type="text">
+        </div>
+        <!--表单域-->
+        <fieldset>
+           <legend>个人信息</legend>
+           <div>
+               <label for="">姓名：</label>
+               <input type="text">
+               <label for="">年龄：</label>
+               <input type="text">
+               <label for="">性别：</label>
+               <input type="radio" name="sex" id="man">男
+               <input type="radio" name="sex" id="woman">女
+           </div>
+        </fieldset>
+        <fieldset>
+            <legend>课表信息</legend>
+            <!--大驼峰 小驼峰 -->
+            <table id="mainTable">
+                <tr>
+                    <th><div>时间</div></th>
+                    <th><div>周一</div></th>
+                    <th><div>周二</div></th>
+                    <th><div>周三</div></th>
+                    <th><div>周四</div></th>
+                    <th><div>周五</div></th>
+                </tr>
+                <tr>
+                    <td>
+                        <div>上午</div>
+                        <div>（1-2节）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>上午</div>
+                        <div>（1-2节）</div>
+                    </td>
+                    <td rowspan="2">
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>上午</div>
+                        <div>（1-2节）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td colspan="2">
+                        <div><img src="./images/logo.png"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>上午</div>
+                        <div>（1-2节）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                    <td>
+                        <div>高等数学</div>
+                        <div>（401教室）</div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>获奖信息</legend>
+            <div>
+                <h5>获奖情况</h5>
+                <ol>
+                    <li>江西省</li>
+                    <li>江西省</li>
+                    <li>江西省</li>
+                    <li>江西省</li>
+                </ol>
+            </div>
+            <hr>
+            <div>
+                <h5>荣誉情况</h5>
+                <ul type="none">
+                    <li>江西省</li>
+                    <li>江西省</li>
+                    <li>江西省</li>
+                    <li>江西省</li>
+                </ul>
+            </div>
+        </fieldset>
+    </div>
+    </body>
+</html>

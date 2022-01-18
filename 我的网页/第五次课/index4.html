@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+    <style>
+        /*标签选择器*/
+        td{
+            width: 200px;
+            height: 200px;
+            text-align: center;/*居中文本*/
+        }
+    </style>
+</head>
+<body>
+    <!--行内样式-->
+    <table id="mytable"  style="border: 5px solid red;">
+        <!--table row(tr)   table data(td)-->
+        <tr style="background-color: blue;">
+            <td rowspan="2">江西省</td><!--列合并-->
+            <td>南昌市
+                <div></div>
+            </td>
+            <td>湾里区</td>
+        </tr>
+            <tr style="background-color: blue;">
+                <td colspan="2">浙江省</td><!--横向合并-->
+            </tr>
+            <tr style="background-color: purple;">
+                <td>浙江省</td>
+                <td>杭州市</td>
+                <td>上城区</td>
+            </tr>
+    </table>
+</body>
+</html>
