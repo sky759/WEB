@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+				function  timer (){
+					//计算时间差要转换毫秒计算，根据毫秒差转换为天时分秒。
+					var a = new Date('2022-01-01 00:00:00');//将时间转化为距离1970-1-1相差多少毫秒
+				    var b = new Date();
+				    var strtime = (a.getTime()-b.getTime())/1000;
+					var d = parseInt(strtime/60/60/24);
+					d=d<10?  "0"+d:d;
+					$("#day").text(d+"天");
+					var h = parseInt(strtime/60/60%24);
+					h=h<10?  "0"+h:h;
+					$(".hour").text(h+"时");
+					var m = parseInt(strtime/60%60);
+					m=m<10?  "0"+m:m;
+					$(".minute").text(m+"分");
+					var s = parseInt(strtime%60);
+					s=s<10?  "0"+s:s;
+					$(".second").text(s+"秒");
+		        }
+				 setInterval(timer,1000);
+		})
+	</script>
+    <title>倒计时</title>
+    <style>
+		#con{
+			width: 400px;
+			height: 700px;
+			margin: 100px auto;
+			background-color: firebrick;
+			
+		}
+        div #a{
+			margin-top: 20px;
+			width: 100%;
+			height: 200px;
+			background: url(images/LOGO.png) no-repeat;
+			background-size: contain;
+			
+        }
+		div #b{
+			width: 100%;
+			height: 300px;
+			font-size: 30px;
+			color: whitesmoke;
+			text-align: center;
+		}
+        div #c{
+			text-align: center;
+		}
+        span {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: #3C3C3C;
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+	<div id="con">
+		<div id="a"></div>
+		<div id="b"><h3>距离</h3><h3>2022-01-01 00:00:00</h3><h4>倒计时 : <b id='day'>0天</b></h4></div>
+		<div id="c">
+		    <span class="hour">00</span>
+		    <span class="minute">00</span>
+		    <span class="second">00</span>
+		</div>
+	</div>
+
+</body>
+
+</html>

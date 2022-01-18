@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!--求1-100之间不能被7整除的证书和
+		    求200-300之间所有奇数和
+			求200-300之间第一个能被7整除的数-->
+		<script type="text/javascript">
+			var i=1;
+			var sum1=0;
+			var sum2=0;
+			var sum3=0;
+			for(i=1;i<=100;i++){
+				if(i%7==0){
+					continue;
+				}
+				sum1=sum1+i;
+			}
+			for(i=200;i<=300;i++){
+				if(i%2==0){
+					continue;
+				}
+				sum2=sum2+i;
+			}
+			for(i=200;i<=300;i++){
+				if(i%7==0){
+					sum3=i;
+					break;
+				}
+			}
+			document.write(sum1+"\n");
+			document.write(sum2+"\n");
+			document.write(sum3+"\n");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

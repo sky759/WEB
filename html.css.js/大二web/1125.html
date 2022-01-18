@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		/* div{width:100px;background-color: red;height: 100px;float:left} */
+		</style>
+		<script src="jquery-1.12.2.js"></script>
+		<script>
+			$(function(){
+				$("#btn").click(function(){
+					//怎么获取我输入的姓名
+					var name = $("#uname").val();
+					var sex = $("#sex").val();
+					$("table").append("<tr><td>"+name+"</td><td>"+sex+"</td><td><a href=''>删除</a></tr>");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		输入姓名<input type="text" id="uname"/>
+		输入性别<input type="text" id="sex"/>
+		<button id="btn">添加</button>
+		<table border="1px">
+			<tr><td>张三</td><td>女</td><td><a href="">删除</a></td></tr>
+		</table>
+	</body>
+</html>

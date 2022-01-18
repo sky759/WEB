@@ -1,0 +1,25 @@
+header,nav,footer{
+	width: 80%;
+	height: 100px;
+	background-color: aquamarine;
+	border-radius: 15px;
+	margin: 15px auto;
+	text-align:center;
+	display: block;
+}
+.inline-block{
+	width: 80%;
+	height: 300px;
+	margin: 15px auto;
+	text-align: center;
+	/*background-color: burlywood;*/
+}
+article,aside{
+	width: 49%;
+	height: 300px;
+	border-radius: 15px;
+	background-color: darkgray;
+	display: inline-block;
+	text-align: center;
+	
+}

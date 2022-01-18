@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-1.12.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				function  timer (){
+					//计算时间差要转换毫秒计算，根据毫秒差转换为天时分秒。
+					var a = new Date('2022-01-01 00:00:00');//将时间转化为距离1970-1-1相差多少毫秒
+				    var b = new Date();
+				    var strtime = (a.getTime()-b.getTime())/1000;
+					var d = parseInt(strtime/60/60/24);
+					d=d<10?  "0"+d:d;
+					$("#day").text(d+"天");
+					var h = parseInt(strtime/60/60%24);
+					h=h<10?  "0"+h:h;
+					$("#shi").text(h+"时");
+					var m = parseInt(strtime/60%60);
+					m=m<10?  "0"+m:m;
+					$("#fen").text(m+"分");
+					var s = parseInt(strtime%60);
+					s=s<10?  "0"+s:s;
+					$("#miao").text(s+"秒");
+                }
+				 setInterval(timer,1000);
+		})
+		</script>	
+		<style type="text/css">
+		    *{
+				margin: 0px;
+				padding: 0px;
+			}
+			.beijing {
+				background-color: #6495ED;
+				width: 400px;
+				height: 650px;
+				margin-left: 480px;
+				margin-top: 20px;
+			}
+			p{
+				font-size:30px ;
+				color: #FFFFFF;
+				margin-bottom: 30px;
+				text-align: center;
+				font-weight: bolder;
+			}
+			.beijing span{
+				padding: 20px 15px;
+				background-color: #333;
+			}
+		</style>
+	
+	</head>
+	<body>
+		<div class="beijing">
+			<br><br><br>
+			<p>距离</p>
+			<br><br><br>
+			<p>2022-01-01 00:00:00</p>
+			<br><br><br>
+			<p>倒计时 : <font size="" color=""id="day">0天</font></p>
+			<br><br><br>
+			<p>
+				<span> <font size="" color="" id="shi">0时</font></span>
+				<span> <font size="" color="" id="fen">0分</font></span>
+				<span><font size="" color="" id="miao">0秒</font></span>
+			</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+  section {
+	background-color: darkblue;
+	width: 1600px;
+	height: 1000px;
+}
+ #back {
+	 background: url(../media/素材%20(1)/images/background.jpg);
+	 height: 1000px;
+	 width: 950px;
+ }

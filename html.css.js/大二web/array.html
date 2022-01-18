@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var a=[55,90,36];
+			var max=0;
+			var lim=0;
+			var avg=0;
+			var sum=0;
+			for(var i=0;i<=2;i++){
+				sum=sum+a[i];
+				if(a[i]<a[i+1]){
+					max=a[i+1];
+					lim=a[i];
+				}
+				else if(a[i]>a[i+1]) {
+					max=a[i];
+					lim=a[i+1];
+				}
+			}
+			avg=sum/a.length;
+			document.write("平均值为"+avg + "\n");
+			document.write("最大值为"+max+"\n");
+			document.write("最小值为"+lim +"\n");
+			document.write("和为"+sum);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

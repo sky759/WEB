@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#back{
+				background-color: darkgray;
+			}
+			#bear{
+				background: url(../media/bear.png) no-repeat;
+				width: 200px;
+				height: 100px;
+				animation: bear 0.5s steps(8) infinite , bc  5s infinite  ; 
+			}
+			@keyframes bear{
+				0%{
+					background-position: 0px 0px;
+				}
+				100%{
+					background-position: -1600px 0px;
+				}
+			}
+			@keyframes bc{
+				from{
+					left: 0;
+				}
+				to{
+					left: 80;
+					transform: translate(1335px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="back">
+		<div id="bear">
+		</div>
+		</div>
+	</body>
+</html>

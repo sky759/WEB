@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		   #daohang{
+			   text-align: left;
+			   padding-right: 10px;
+			   padding-bottom: 30px;
+			   width: 400px;
+			   height: 20px;
+			   border: darkgray solid 1px;
+		   }
+			ul li {
+				list-style-type: none;
+				display: inline;
+			}
+			#beijing{
+				width: 800px;
+				overflow: hidden;
+				border: solid 1px darkgray;
+			}
+		</style>
+		<script src="jquery-1.12.2.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+        	$(document).ready(function(){
+				$("p").hide();
+				$("ul li").hover(function(){
+					var index = $("li").index(this);
+					$("p").hide();
+					$("p").eq(index).show(); 
+				})
+			})
+        </script>	
+	</head>
+	<body>
+		<div id="daohang">
+			<ul>
+				<li >国际大牌 &ensp; |</li>
+				<li >国妆名牌 &ensp; |</li>
+				<li >清洁用品 &ensp; |</li>
+				<li >男士精品 &ensp; |</li>
+			</ul>
+		</div>
+		<div id="beijing">
+			<p><img src="./media/Media/guojidapai.jpg"  ></p>
+			<p><img src="./media/Media/guozhuangmingpin.jpg" ></p>
+			<p><img src="./media/Media/qingjieyongpin.jpg" ></p>
+			<p><img src="./media/Media/nanshijingpin.jpg" ></p>
+		</div>
+	</body>
+</html>

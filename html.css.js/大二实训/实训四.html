@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#FX,#QBX,#QX{
+				margin-top: 10px;
+			}
+			#one,#two,#three,#four{
+				margin-top: 10px;
+			}
+		</style>
+		<script src="jquery-1.12.2.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+        	$(document).ready(function(){
+				$("#QX").click(function(){
+					$("input:checkbox").prop('checked',true);
+				});
+				$("#QBX").click(function(){
+					$("input:checkbox").prop('checked',false);
+				});
+				$("#FX").click(function(){
+					$("input:checkbox").each(function(){
+						this.checked =! this .checked;
+					})
+				})
+			})
+        </script>  	
+	</head>
+	<body>
+		<div id="border">
+			    <div id="one">
+			    	<input name="Checkbox" type="checkbox" id="bt1">
+			    	<label>尼古拉斯·赵四</label>
+			    </div>
+				<div id="two">
+					<input name="Checkbox" type="checkbox" id="bt2" >
+					<label>莱昂纳多·刘能</label>
+				</div>
+				<div id="three">
+					<input name="Checkbox" type="checkbox" id="bt3" >
+					<label>约翰尼·宋小宝</label>
+				</div>
+				<div id="four">
+					<input name="Checkbox" type="checkbox" id="bt4" >
+					<label>布拉德·小沈阳</label>
+				</div>
+			<div id="bottom">
+				<button type="button" id="QX">全选</button>
+				<button type="button" id="QBX">全不选</button>	
+				<button type="button" id="FX">反选</button>	
+			</div>
+		</div>
+	</body>
+</html>

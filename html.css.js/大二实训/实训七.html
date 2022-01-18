@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				margin-top: 20px;
+			}
+			fieldset{
+				width: 500px;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			table{
+				text-align: center;
+				
+			}
+		</style>
+		<script src="jquery-1.12.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#tj").click(function(){
+					var name=$("#name").val();
+					var age=$("#age").val();
+					var gender=$("#gender").val();
+					var phone=$("#pn").val();
+					$("table").append("<tr><td>" + name +"</td><td>" + age +"</td><td>" + gender +"</td><td>" + phone +"</td><td><a href='#'>删除</a></td></tr>");
+				})
+				$("table").on("click","a",function(){
+					$(this).closest('tr').remove();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<section>
+			<fieldset id="">
+				<legend>学生录入系统</legend>
+				<div id="">
+					姓名：<input type="text" name="" id="name" value="" />
+				</div>
+				<div id="">
+					年龄：<input type="text" name="" id="age" value="" />
+				</div>
+				<div id="">
+					性别：<select id="gender">
+						<option value="男">男</option>
+						<option value="女">女</option>
+					</select>
+				</div>
+				<div id="">
+					手机：<input type="text" name="" id="pn" value="" />
+				</div>
+				<div id="">
+				   <input type="button" name="" id="tj" value="确认提交" />
+				</div>
+			</fieldset>
+			<div id="biao">
+				<table cellspacing="" cellpadding="">
+					<tr bgcolor="#9acd32">
+						<td width="103px">姓名</td>
+						<td width="103px">年龄</td>
+						<td width="103px">性别</td>
+						<td width="103px">手机</td>
+						<td width="103px">删除</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+	</body>
+</html>

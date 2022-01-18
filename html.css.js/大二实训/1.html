@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <title></title>
+	    <script src="./jquery-1.12.2.js"></script>
+	   <style>
+           .select1,.select2{width:50px;height: 100px;text-align: center;float: left;}
+           .btns{width:60px;height: 100px;float:left;margin-left:10px;margin-right: 10px;}
+           .btns button{width:60px;height: 20px;margin-bottom: 3px;}
+       </style>
+       	<script>
+	    	$(function(){
+                $("#toRight").click(function(){
+                    $(".select2").append($(".select1 option:selected"));
+                })
+                $("#toLeft").click(function(){
+                    $(".select1").append($(".select2 option:selected"))
+                })
+                $("#allRight").click(function(){
+                    $(".select2").append($(".select1 option"));
+                })
+                $("#allLeft").click(function(){
+                    $(".select1").append($(".select2 option"));
+                })
+            })
+        </script>
+	</head>
+	<body>
+        <select multiple="multiple" class="select1">
+            <option>添加</option>
+            <option>修改</option>
+            <option>删除</option>
+            <option>查询</option>
+            <option>搜索</option>
+        </select>
+        <div class="btns">
+            <button id="toRight"> > </button>
+            <button id="toLeft"> < </button>
+            <button id="allRight"> >> </button>
+            <button id="allLeft"> << </button>
+        </div>
+        <select multiple="multiple" class="select2">
+
+        </select>
+    </body>
+</html>

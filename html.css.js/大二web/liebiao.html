@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-1.12.2.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				padding: 0px;
+				margin: 0px
+			}
+
+			p {
+				background-color: orange;
+				text-align: center;
+				margin-bottom: 5px;
+				cursor: pointer;
+				height: 80px;
+				padding-top: 50px;
+			}
+
+			ul li {
+				list-style-type: none;
+				background-color: pink;
+				text-align: center;
+				margin-bottom: 10px;
+				height: 50px;
+				padding-top: 30px;
+			}
+
+			ul {
+				display: none;
+			}
+
+			.liebiao {
+				width: 300px;
+				height: 665px;
+				border: 2px solid red
+			}
+
+			#one,
+			#two,
+			#three {
+				display: block;
+			}
+		</style>
+		<script>
+			$(document).ready(function() {
+				$("p").click(function() {
+					//在我点击ul出现之前，所有UL隐藏
+					$("ul").hide(500);
+					$(this).siblings().show(500);
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="liebiao">
+			<div id="one">
+				<p>幼儿园同学</p>
+				<ul>
+					<li>张三</li>
+					<li>李四</li>
+					<li>王五</li>
+				</ul>
+			</div>
+			<div id="two">
+				<p>小学同学</p>
+				<ul>
+					<li>路人甲</li>
+					<li>路人乙</li>
+					<li>路人丙</li>
+				</ul>
+			</div>
+			<div id="three">
+				<p>中学同学</p>
+				<ul>
+					<li>路人丁</li>
+					<li>路人五</li>
+					<li>路人六</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

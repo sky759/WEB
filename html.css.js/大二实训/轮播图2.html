@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!DOCTYPE html>
+		<html>
+			<head>
+				<meta charset="utf-8">
+				<title></title>
+				<script src="jquery-1.12.2.js" type="text/javascript" charset="utf-8"></script>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						var play = '';
+						var a = 0;
+						function lunbo() {
+							/*此函数为show传值a;并轮播一轮后返回第一张*/
+							//只有播放和停止,没有暂停。
+							play = setInterval( /*要执行的函数+每隔时间执行*/ function() {
+								//每次图片出现，其他图片消失
+								a++;
+								shows(a);
+								if (a == 5) {
+									a = -1;
+								}
+							}, 1000);
+						}
+		
+						function shows(a) {
+							/*轮播出现*/
+							$(".pic img:eq(" + a + ")").show();
+							$(".pic img:eq(" + a + ")").siblings().hide();
+							/*轮播点变为红色*/
+							$(".num span:eq(" + a + ")").css("background-color", "red");
+							$(".num span:eq(" + a + ")").siblings().css("background-color", "#999");
+						}
+						//鼠标悬浮使出现相应的图片。
+						$(".num span").hover(function() {
+							//传值
+							clearInterval(play); //轮播清除
+							a = $(this).index();
+							shows(a);
+						}, function() {
+							lunbo();
+						});
+						$(".zuo").click(function(){
+							clearInterval(play);
+							if(a==-1){
+								a=5;
+							}
+							var b = --a;
+							shows(b);
+							lunbo();
+						})
+						$(".you").click(function(){
+							clearInterval(play);
+							if(a==5){
+								a=-1;
+							}
+							var b = ++a;
+							shows(b);
+							lunbo();
+						})
+						shows(0);
+						lunbo();
+					})
+				</script>
+				<style type="text/css">
+					* {
+						margin: 0px;
+						padding: 0px;
+					}
+		
+					.div1 {
+						width: 960px;
+						height: 600px;
+						position: relative;
+					}
+		
+					.pic {
+						width: 960px;
+						height: 600px;
+						position: relative;
+					}
+		
+					.pic img {
+						width: 960px;
+						height: 600px;
+						position: absolute;
+					}
+		
+					.num {
+						position: absolute;
+						bottom: 10px;
+						margin-left: 400px;
+					}
+		
+					.num span {
+						width: 22px;
+						height: 22px;
+						color: #fff;
+						background-color: #999;
+						margin-left: 5px;
+						display: inline-block;
+						text-align: center;
+						line-height: 22px;
+						border-radius: 11px;
+					}
+					.div2{
+						position: relative;
+					}
+					.zuo img {
+						display: inline-block;
+						width: 100px;
+						height: 100px;
+						float: left;
+						margin-top: -350px;
+					}
+					.you img {
+						display: inline-block;
+						width: 100px;
+						height: 100px;
+						float: right;
+						margin-top: -350px;
+					}
+				</style>
+			</head>
+			<body>
+				<div class="div1">
+					<!--图片集合-->
+					<div class="pic">
+						<img src="media/ban1.jpg">
+						<img src="media/ban2.jpg">
+						<img src="media/ban3.jpg">
+						<img src="media/ban4.jpg">
+						<img src="media/ban5.jpg">
+						<img src="./media/webp%20树懒.jpg">
+					</div>
+					<!--圆点集合-->
+					<div class="num">
+						<span>1</span>
+						<span>2</span>
+						<span>3</span>
+						<span>4</span>
+						<span>5</span>
+						<span>6</span>
+					</div>
+					<div class="div2">
+						<div class="zuo">
+							<img src="media/89db71300fa11aafca243bf0fdfffae3.jpeg" >
+						</div>
+						<div class="you">
+							<img src="media/89db71300fa11aafca243bf0fdfffae2.jpeg" >
+						</div>
+					</div>
+					
+				</div>
+			</body>
+		</html>
+	</body>
+</html>

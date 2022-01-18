@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100%;
+				line-height: 100px;
+				background-color: #0000FF;
+				font-size: 30px;
+				color: white;
+				text-align: center;
+				margin: 30px auto;
+				animation: box-c 4s linear 0.5s infinite;
+				/* animation-name: box-c;
+				animation-duration: 4s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite; */
+			}
+			/* 定义动画 */
+			@keyframes box-c{
+				0%{
+					background-color: blue;
+					opacity: 1;
+					transform: translate(0px,0px) rotate(0deg) scale(1);
+				}
+				25%{
+					background-color: red;
+					opacity: 0.5;
+					transform: translate(100px,0px) rotate(5deg) scale(0.7);
+				}
+				50%{
+					background-color: green;
+					opacity: 1;
+					transform: translate(0px,0px) rotate(-5deg) scale(1.2);
+				}
+				75%{
+					background-color:pink;
+					opacity: 0.5;
+					transform: translate(-100px,0px) rotate(5deg) scale(0.7);
+				}
+				100%{
+					background-color: #0000FF;
+					opacity: 1;
+					transform: translate(0px,0px) rotate(0deg) scale(1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			你好，李焕英！
+		</div>
+	</body>
+</html>

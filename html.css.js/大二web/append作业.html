@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.first{
+				background-color: cornflowerblue;
+				height: 40px;
+				font-size: larger;
+				padding-top: 13px;
+				padding-left:10px;
+			}
+			table{
+				margin-top: 20px;
+				margin-left: 50px;
+				text-align: center;
+			}
+			#one,#two,#three{
+				font-size: xx-large;
+				display: inline-block;
+				margin-left: 10px;
+			}
+		</style>
+		<script src="jquery-1.12.2.js" type="text/javascript" charset="utf-8"></script>
+	    <script type="text/javascript">
+	     	$(document).ready(function(){
+				$("#tianjia").click(function(){
+					var id= $("#ID").val();
+					var name = $("#Name").val();
+					var n =new Date();
+					$("table").append("<tr><td>" + id +"</td><td>" + name+ "</td><td>" + n.getFullYear()+"-"+(n.getMonth()+1)+"-"+n.getDate() +"</td><td><a href='#'>删除</a></td></tr>" );
+				})
+				$("table").on("click","a",function(){ // $(父级选择器).on("event事件","子选择器",function(){函数体})
+					$(this).closest('tr').remove();  //closest遍历查找最近的TR元素，并删除。
+				})
+			})
+	    </script>
+	</head>
+	<body>
+		<div class="first">
+			产品菜单
+		</div>
+		<div class="mid">
+			<div id="one">
+				ID:<input type="datetime" name="" id="ID" value="" style="width: 250px;height: 30px;border-radius: 10px;"/>
+			</div>
+			<div id="two">
+				Name:<input type="text" name="" id="Name" value="" style="width: 250px;height: 30px;border-radius: 10px;"/>
+				<input type="button" name="" id="tianjia" value="添加" style="height: 30px;background-color: #6495ED;"/>
+			</div>
+			<div id="three">
+				搜索关键字:<input type="search" name="" id="" value="" style="width:400px;height: 35px;border-radius: 10px;"/>
+			</div>
+		</div>
+		<div class="biao">
+			<table>
+				<tr>
+					<td width="100px">ID</td>
+					<td width="500px">Name</td>
+					<td width="500px">Ctime</td>
+					<td width="100px">Operation</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>奔驰</td>
+					<td>2021-11-30</td>
+					<td><a href="#">删除</a></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>宝马</td>
+					<td>2021-11-30</td>
+					<td><a href="#">删除</a></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+.first{
+	width: 1500px;
+}
+.header {
+	height: 50px;
+	width: 1500px;
+	border-color: #aa0000;
+	border-bottom: #AA0000  solid ;
+}
+.shop {
+	display: inline-block;
+	float: left;
+	height: 50px;
+	width: 150px;
+	background-color: #AA0000;
+	color: white;
+	line-height: 50px;
+	text-align: center;
+	margin-left: 50px;
+}
+.shop_right ul li  {
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	float: right;
+	margin-left: 10px;
+	line-height: 50px;
+	text-align: center;
+	margin-right: 50px;
+}
+.middle_one {
+	height: 80px;
+	width: 1400px;
+	border-bottom: #666666 solid 1px;
+	margin: auto;
+}
+.middle_one ul li {
+	display: inline-block;
+	float: left ;
+    margin-top: -20px;
+	margin-left: 120px;
+	line-height: 5px;
+}
+#one,#two,#three,#four {
+	display: inline-block;
+	line-height: 1px;
+}
+.middle_two ul {
+	display: inline-block;
+	float: left;
+	margin-left: 80px;
+	
+}
+.middle_two{
+	height: 230px;
+	width: 1400px;
+	margin: auto;
+	border-bottom: #666666 solid 1px;
+}
+ a{
+	color: #666;
+	text-decoration: none;
+}
+.five {
+	width: 1200px;
+	margin: auto;
+	text-align: center;
+}
+
+

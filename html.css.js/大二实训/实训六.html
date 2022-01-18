@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#beijing {
+				border: solid #A9A9A9 1px;
+				width: 500px;
+				height: 600px;
+				
+			}
+			#pingmu {
+				border:solid #A9A9A9 1px;
+				margin-top: 127px;
+				margin-left: 180px;
+				width: 150px;
+				height: 60px;
+				text-align: center;
+				padding-top: 30px;
+			}
+			td {
+				background-color: #A9A9A9;
+				width: 100px;
+				height: 60px;
+			}
+		</style>
+		<script src="./jquery-1.12.2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("td").click(function(){
+					$(this).prop("style","background-color:black");
+					$(this).on("click",function(){
+						$(this).prop("style","background-color:#A9A9A9");
+					});
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="beijing">
+			<table>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			<div id="pingmu">
+				屏幕中央
+			</div>
+		</div>
+	</body>
+</html>

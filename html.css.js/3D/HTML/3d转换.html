@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				perspective: 1000px;
+			}
+			section{
+				/*子绝父相，子元素绝对定位，父元素相对定位*/
+				position: relative;
+				width:300px ;
+				height:600px;
+				background-image: url(../media/4f0e9613cb3f06b02e326daf0f5a44cabe046f15.png@518w.webp);
+				margin:200px auto;
+				animation: horse 5s linear infinite;
+				transform-style: preserve-3d;
+			}
+			#one,#three,#five{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width:100%;
+				height:100%;
+				background-image: url(../media/f8d8c1387bc906dd57bdcb2c3b776c29.jpeg);
+			}
+			#two,#four,#six{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				height: 100%;
+				background-image: url(../media/9a4e7e8e7629754bb6954eba2e277607.jpg);
+			}
+			section:hover{
+				animation-play-state: paused;
+			}
+			section div:nth-child(1){
+				transform:rotateY(0deg) translateZ(400px);
+			}
+			section div:nth-child(2){
+				transform:rotateY(60deg) translateZ(400px);
+			}
+			section div:nth-child(3){
+				transform:rotateY(120deg) translateZ(400px);
+			}
+			section div:nth-child(4){
+				transform:rotateY(180deg) translateZ(400px);
+			}
+			section div:nth-child(5){
+				transform:rotateY(240deg) translateZ(400px);
+			}
+			section div:nth-child(6){
+				transform:rotateY(300deg) translateZ(400px);
+			}
+			@keyframes horse{
+				from{
+					transform: rotateY(0deg);
+				}
+				to{
+					transform: rotateY(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<div id="one"></div>
+			<div id="two"></div>
+			<div id="three"></div>
+			<div id="four"></div>
+			<div id="five"></div>
+			<div id="six"></div>
+		</section>
+	</body>
+</html>
